@@ -1,34 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Profile.css';
 
+var str = '';
+var start = false;
+const text = '주니어개발자 박정윤입니다.';
+var arr = text.split('');
+var idx = 0;
+var type = '';
 function Profile() {
-        useEffect(() => {
-            const text = '박정윤의 Portfolio입니다.';
-            var arr = text.split('');
-            var target = document.getElementsByClassName('Name');
-            console.log(target);
-
-            var idx = 0;
-            var start = false;
-            
-            if(start===false){
-                start = true;
-                var type = setInterval(typing, 500);
+    const [title, setState] = useState("");
+    const [status, setStatus] = useState(false);
+    function typing(){
+        if(idx < arr.length){
+            var txt = arr[idx];
+            str +=txt;
+            var string = str;
+            setState(string);
+            idx++
+        }else{
+            clearInterval(type);
+        }
+    }
+    useEffect(()=>{
+        function start(){
+            if(status===false){
+                setStatus(true);
+                type = setInterval(typing, 140);
             }
-            function typing(){
-                if(idx < arr.length){
-                    var txt = arr[idx];
-                    target.innerHTML += txt;
-                    idx++
-                }else{
-                    clearInterval(type);
-                }
-            }
-        });
+        }
+        start();
+    })
     return (
-        <div className="Profile">
+        <div className="Head">
             <div className="Wrap">
-                <h1 className="Name"></h1>
+                <h1 className="title">안녕하세요</h1>
+                <h1 className="title Name">{title}</h1>
             </div>
         </div>
     )

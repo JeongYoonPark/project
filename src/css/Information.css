@@ -1,4 +1,53 @@
 .Information{
     height: 1000px;
     background-color: #fff;
+    padding:0px 150px;
+}
+.Information > .head{
+    display:flex;
+    flex-direction: row;
+}
+.head > div{
+    flex:1; 
+    font-size: 32px;
+    font-weight:900;
+    padding:30px 0px;
+}
+.tab_box{
+    position: relative;
+}
+.tab{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+}
+.selected{
+    display: block;
+    text-decoration: underline;
+}
+.Contact > .card{
+    width:40%;
+    margin:0 auto;
+    height: 75px;
+    margin-top: 100px;
+    padding:80px 30px;
+    box-shadow: 0px 0px 5px black;
+}
+.card>.Info{
+    letter-spacing: 0.3px;
+    font-size: 20px;
+    float: left;
+    font-weight: bold;
+    margin-bottom: 25px;
+    position: relative;
+}
+.Info>img{
+    width:24px;
+    height: 24px;
+    position: absolute;
+    bottom:1px;
+}
+.Info>span{
+    margin-left: 30px;
 }
