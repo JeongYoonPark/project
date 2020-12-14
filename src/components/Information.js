@@ -24,7 +24,9 @@ function Information() {
             </div>
             <div className="tab_box">
                 <div className={(status==0 ? " selected " : "")+"Profile tab"}>
-                    
+                    <div className="Introduce">
+                        <h3>Who am I.</h3>
+                    </div>  
                 </div>
                 <div className={(status==1 ? " selected " : "")+"Skills tab"}>
                     

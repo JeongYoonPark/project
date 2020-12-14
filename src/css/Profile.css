@@ -12,12 +12,12 @@
     background-color:rgba(0, 0, 0, 0.8);
 }
 .title{
-    max-width: 680px;
+    max-width: 750px;
     display: inline;
     position: absolute;
     top:260px;
     color:#FFFFFF;
-    font-size: 60px;
+    font-size: 56px;
     font-weight: bold;
     margin:0 auto;
     transform: translate(-50%,-100% );

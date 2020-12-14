@@ -22,6 +22,7 @@
     position: absolute;
     display: none;
 }
+
 .selected{
     display: block;
     text-decoration: underline;
@@ -35,12 +36,14 @@
     box-shadow: 0px 0px 5px black;
 }
 .card>.Info{
+    width:100%;
     letter-spacing: 0.3px;
     font-size: 20px;
     float: left;
     font-weight: bold;
     margin-bottom: 25px;
     position: relative;
+    text-align: center;
 }
 .Info>img{
     width:24px;
