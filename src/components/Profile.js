@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import '../css/Profile.css';
 
-var str = '';
-var start = false;
-const text = '주니어개발자 박정윤입니다.';
-var arr = text.split('');
-var idx = 0;
-var type = '';
+let str = '';
+let start = false;
+let text = '주니어개발자 박정윤입니다.';
+let arr = text.split('');
+let idx = 0;
+let type = '';
 function Profile() {
     const [title, setState] = useState("");
     const [status, setStatus] = useState(false);
     function typing(){
         if(idx < arr.length){
-            var txt = arr[idx];
+            let txt = arr[idx];
             str +=txt;
-            var string = str;
+            let string = str;
             setState(string);
             idx++
         }else{
