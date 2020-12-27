@@ -10,13 +10,13 @@ const reducers = ( state = initialStates, action) => {
         case countActions.INCREASE_COUNT: {
             return {
                 ...state,
-                count: state.count - 1,
+                count: state.count + 1,
             }
         }
         case countActions.DECREASE_COUNT: {
             return {
                 ...state,
-                count: state.count + 1,
+                count: state.count - 1,
             }
         }
         default: {

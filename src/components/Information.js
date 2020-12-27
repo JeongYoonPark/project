@@ -31,7 +31,6 @@ const Information = () => {
     const [localCount, setLocalCount] = useState(0);
 
     const { count:storeCount } = useSelector((state) => state.count);
-
     useEffect(() => {
         console.log('Component did mount');
     }, []);
@@ -59,6 +58,23 @@ const Information = () => {
     
     return (
         <section className="Information">
+            <>
+      {'Function component'}
+      <div>
+        <div>
+          {`localCount: ${localCount}`}
+        </div>
+        <div>
+          {`storeCount: ${storeCount}`}
+        </div>
+      </div>
+      <div onClick={increaseCount}>
+        {'+'}
+      </div>
+      <div onClick={decreaseCount}>
+        {'-'}
+      </div>
+    </>
             <div className="head">
                 {tab.map((name, idx) => {
                     return(
