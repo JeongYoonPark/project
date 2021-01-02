@@ -84,7 +84,7 @@ const Information = () => {
             <div className="tab_box">
                 <div className={(status==0 ? " display " : "")+"Profile tab"}>
                     <div className="introduce">
-                        <h1 className="active">Who am I.</h1>
+                        <h1 className="active">Introduce</h1>
                         <div className="profile">
                             <div className="InfoBox">
                                 <img className="profileImg" src={profile} alt=""/>
@@ -98,11 +98,11 @@ const Information = () => {
                                     <div className="front skill_box">
                                         <span><img src={HTML} alt=""/></span>
                                         <span><img src={CSS} alt=""/></span>
-                                        <span><img src={JS} alt=""/></span>
-                                        <span><img src={jQuery} alt=""/></span>
-                                        <span><img src={ReactImg} alt=""/></span>
                                         <span><img src={Sass} alt=""/></span>
-                                        <span> <img src={Redux} className="icon" alt=""/></span>
+                                        <span><img src={ReactImg} alt=""/></span>
+                                        <span><img src={Redux} className="icon" alt=""/></span>
+                                        <span><img src={jQuery} alt=""/></span>
+                                        <span><img src={JS} alt=""/></span>
                                     </div>
                                     <h2>BACK-END</h2>
                                     <div className="back skill_box">
@@ -128,10 +128,10 @@ const Information = () => {
                         <div className="icon_box">
                             <img src={HTML} className="icon" alt=""/>
                             <img src={CSS} className="icon" alt=""/>
+                            <img src={Sass} className="icon" alt=""/>
                             <img src={JS} className="icon" alt=""/>
                             <img src={jQuery} className="icon" alt=""/>
                             <img src={PHP} className="icon" alt=""/>
-                            <img src={Sass} className="icon" alt=""/>
                             <img src={MySQL} className="icon" alt=""/>
                         </div>
                         <img src={Project1} alt=""/>
@@ -146,10 +146,10 @@ const Information = () => {
                         <div className="icon_box">
                             <img src={HTML} className="icon" alt=""/>
                             <img src={CSS} className="icon" alt=""/>
+                            <img src={Sass} className="icon" alt=""/>
                             <img src={JS} className="icon" alt=""/>
                             <img src={jQuery} className="icon" alt=""/>
                             <img src={PHP} className="icon" alt=""/>
-                            <img src={Sass} className="icon" alt=""/>
                             <img src={MySQL} className="icon" alt=""/>
                         </div>
                         <img src={Project3} className="Mobile" alt=""/>
