@@ -21,6 +21,7 @@ import Project4 from '../img/project4.png';
 import Windows from '../img/Windows.png';
 import Linux from '../img/Linux.png';
 import Redux from '../img/redux.png';
+import ProjectModal from '../components/modal/ProjectModal.js';
 
 const Information = () => {
 
@@ -29,6 +30,7 @@ const Information = () => {
 
     const dispatch = useDispatch();
     const [localCount, setLocalCount] = useState(0);
+    const [show, modalShow] = useState(false);
 
     const { count:storeCount } = useSelector((state) => state.count);
     useEffect(() => {
@@ -72,6 +74,7 @@ const Information = () => {
         {'-'}
       </div>
     </> */}
+            <ProjectModal show={show}/>
             <div className="head">
                 {tab.map((name, idx) => {
                     return(

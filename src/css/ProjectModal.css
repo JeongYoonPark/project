@@ -1,0 +1,36 @@
+.Modal-Background{
+    position: fixed;
+    width: 100vw;
+    top:0;
+    left:0;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.Modal-Box{
+    width:80vw;
+    height: 70vh;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 10vh auto;
+}
+.close-btn{
+    text-align:right;
+    margin-top:0px;
+    font-weight: 200;
+    font-size: 32px;
+}
+.close-btn > span{
+    cursor: pointer;
+}
+.icon{
+    width:50px;
+    height:50px;
+    margin:0;
+    margin-right: 30px;
+}
+.Image{
+    width:80%;
+    height:70%;
+}
