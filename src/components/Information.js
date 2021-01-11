@@ -54,7 +54,10 @@ const Information = () => {
     function tabChange(idx){
         setStatus(idx);
     }
-    
+    function popmodal(e) {
+        e.preventDefault();
+        modalShow(true);
+    }
     return (
         <section className="Information">
             {/* <>
@@ -74,7 +77,7 @@ const Information = () => {
         {'-'}
       </div>
     </> */}
-            <ProjectModal show={show}/>
+            <ProjectModal show={show} onHide={() => modalShow(false)}/>
             <div className="head">
                 {tab.map((name, idx) => {
                     return(
@@ -125,7 +128,7 @@ const Information = () => {
                     </div>  
                 </div>
                 <div className={(status==1 ? " display " : "")+"Project tab"}>
-                    <div className="ProjectBox">
+                    <div className="ProjectBox" onClick={popmodal}>
                         <h2>달리셔스 BackOffice 제작</h2>
                         <h3>2019-12 ~ ing</h3>
                         <div className="icon_box">

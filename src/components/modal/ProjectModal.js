@@ -11,13 +11,25 @@ import Project1 from '../../img/project1.png';
 
 function ProjectModal(props) {
 
-    // const [modal, setModal] = useState(props.show);
+    const modal = document.querySelector(".Modal-Background");
+    const close = document.querySelector(".close");
 
-    // console.log
+    function CloseModal(e){
+        e.preventDefault();
+        if(e.target == modal || e.target == close){
+            props.onHide();
+            console.log(modal);
+            modal.style.display = "none";
+        }
+    }
     return (
-        <div className="Modal-Background" style={{dispaly: props.show ? "block" : "none"}}>
+        <div 
+            className="Modal-Background" 
+            style={{display: props.show ? "block" : "none"}}
+            onClick={CloseModal}
+        >
             <div className="Modal-Box">
-                <p className="close-btn"><span>X</span></p>
+                <p className="close-btn"><span className="close">X</span></p>
                 <h2>달리셔스 BackOffice 제작</h2>
                         <div className="icon_box">
                             {/* <img src={HTML} className="icon" alt=""/> */}

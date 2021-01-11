@@ -1,4 +1,5 @@
 .Modal-Background{
+    cursor: pointer;
     position: fixed;
     width: 100vw;
     top:0;
@@ -8,6 +9,7 @@
     background-color: rgba(0, 0, 0, 0.9);
 }
 .Modal-Box{
+    cursor: default;
     width:80vw;
     height: 70vh;
     padding: 20px 30px;
