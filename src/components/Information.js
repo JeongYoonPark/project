@@ -31,6 +31,7 @@ const Information = () => {
     const dispatch = useDispatch();
     const [localCount, setLocalCount] = useState(0);
     const [show, modalShow] = useState(false);
+    const [modalIdx, setIndex] = useState(1);
 
     const { count:storeCount } = useSelector((state) => state.count);
     useEffect(() => {
@@ -47,12 +48,11 @@ const Information = () => {
         dispatch(actions.decreaseCount());
     }, [localCount, dispatch]);
 
-    const backgroundBlack = useCallback(() => {
-
-    })
-
     function tabChange(idx){
         setStatus(idx);
+    }
+    function setModal(idx){
+        setIndex(idx);
     }
     function popmodal(e) {
         e.preventDefault();
@@ -77,7 +77,7 @@ const Information = () => {
         {'-'}
       </div>
     </> */}
-            <ProjectModal show={show} onHide={() => modalShow(false)}/>
+            <ProjectModal idx={modalIdx} show={show} onHide={() => modalShow(false)}/>
             <div className="head">
                 {tab.map((name, idx) => {
                     return(
@@ -128,42 +128,23 @@ const Information = () => {
                     </div>  
                 </div>
                 <div className={(status==1 ? " display " : "")+"Project tab"}>
-                    <div className="ProjectBox" onClick={popmodal}>
-                        <h2>달리셔스 BackOffice 제작</h2>
-                        <h3>2019-12 ~ ing</h3>
-                        <div className="icon_box">
-                            <img src={HTML} className="icon" alt=""/>
-                            <img src={CSS} className="icon" alt=""/>
-                            <img src={Sass} className="icon" alt=""/>
-                            <img src={JS} className="icon" alt=""/>
-                            <img src={jQuery} className="icon" alt=""/>
-                            <img src={PHP} className="icon" alt=""/>
-                            <img src={MySQL} className="icon" alt=""/>
+                    <h1>Company</h1>
+                    <div className="Company">
+                        <div className="ProjectBox" onClick={popmodal}>
+                            <h2>백오피스 개발</h2>
+                            <h3>2019-12 ~ </h3>
                         </div>
-                        <img src={Project1} alt=""/>
-                        <h4>
-                            BackOffice 개발.<br/>
-                            상품, 식단, 주문, 컨텐츠 등등 <br/> 운영의 전반적인 부분을 관리하는 사이트    
-                        </h4>
-                    </div>
-                    <div className="ProjectBox">
-                        <h2>모바일 웹</h2>
-                        <h2>2020-10 ~ ing</h2>
-                        <div className="icon_box">
-                            <img src={HTML} className="icon" alt=""/>
-                            <img src={CSS} className="icon" alt=""/>
-                            <img src={Sass} className="icon" alt=""/>
-                            <img src={JS} className="icon" alt=""/>
-                            <img src={jQuery} className="icon" alt=""/>
-                            <img src={PHP} className="icon" alt=""/>
-                            <img src={MySQL} className="icon" alt=""/>
+                        <div className="ProjectBox">
+                            <h2>모바일 웹</h2>
+                            <h2>2020-10 ~ </h2>
                         </div>
-                        <img src={Project3} className="Mobile" alt=""/>
-                        <img src={Project4} className="Mobile" alt=""/>
-                        <h4>
-                            주문, 식단을 체크하고 준비상태로 바꾸는 사이트 
-                        </h4>
                     </div>
+                    {/* <h1>Personal</h1>
+                    <div className="Personal">
+                        <div>
+
+                        </div>
+                    </div> */}
                 </div>
                 <div className={(status==2 ? " display " : "")+"Contact tab"}>
                     <div className="card">

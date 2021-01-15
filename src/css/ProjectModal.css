@@ -16,9 +16,18 @@
     background-color: #fff;
     border-radius: 10px;
     margin: 10vh auto;
+    overflow-y: scroll;
+    position: relative;
+}
+h2{
+    margin-top: 60px;
+}
+.Modal-Wrap{
+    width: 100%;
 }
 .close-btn{
-    text-align:right;
+    position: fixed;
+    right:160px;
     margin-top:0px;
     font-weight: 200;
     font-size: 32px;
@@ -32,7 +41,10 @@
     margin:0;
     margin-right: 30px;
 }
-.Image{
-    width:80%;
-    height:70%;
+.Description{
+    margin-top: 100px;
+    text-align: left;
+}
+.Description > img{
+    width:100%;
 }

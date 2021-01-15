@@ -7,7 +7,7 @@ import jQuery from '../../img/jQuery.png';
 import Sass from '../../img/Sass.png';
 import PHP from '../../img/Php.png';
 import MySQL from '../../img/MySQL.png';
-import Project1 from '../../img/project1.png';
+import Project1 from '../../img/project2.png';
 
 function ProjectModal(props) {
 
@@ -29,10 +29,31 @@ function ProjectModal(props) {
             onClick={CloseModal}
         >
             <div className="Modal-Box">
-                <p className="close-btn"><span className="close">X</span></p>
-                <h2>달리셔스 BackOffice 제작</h2>
+            <p className="close-btn"><span className="close">X</span></p>
+                <div class="Modal-Wrap">
+                    <div className="Modal_divide" style={{display: props.idx == 1 ? "block" : "none"}}>
+                    <h2>백오피스 개발</h2>
+                    <h3>근무지 : 달리셔스</h3>
+                    <h3>UI/UX개발, API개발</h3>
+                    <div className="icon_box">
+                        <img src={HTML} className="icon" alt=""/>
+                        <img src={CSS} className="icon" alt=""/>
+                        <img src={Sass} className="icon" alt=""/>
+                        <img src={JS} className="icon" alt=""/>
+                        <img src={jQuery} className="icon" alt=""/>
+                        <img src={PHP} className="icon" alt=""/>
+                        <img src={MySQL} className="icon" alt=""/>
+                    </div>
+                    <div className="Description">
+                        <img src={Project1} alt=""/>
+                    </div>
+                    </div>
+                    {/* <div className="Modal_divide" style={{display: props.idx == 2 ? "block" : "none"}}>
+                    <h2>백오피스 개발</h2>
+                    <h3>근무지 : 달리셔스</h3>
+                    <h3>UI/UX개발, API개발</h3>
                         <div className="icon_box">
-                            {/* <img src={HTML} className="icon" alt=""/> */}
+                            <img src={HTML} className="icon" alt=""/>
                             <img src={CSS} className="icon" alt=""/>
                             <img src={Sass} className="icon" alt=""/>
                             <img src={JS} className="icon" alt=""/>
@@ -40,11 +61,11 @@ function ProjectModal(props) {
                             <img src={PHP} className="icon" alt=""/>
                             <img src={MySQL} className="icon" alt=""/>
                         </div>
-                        {/* <img src={Project1} className="Image" alt=""/>
-                        <h4>
-                            BackOffice 개발.<br/>
-                            상품, 식단, 주문, 컨텐츠 등등 <br/> 운영의 전반적인 부분을 관리하는 사이트    
-                        </h4> */}
+                        <div className="Description">
+                            <img src={Project1} alt=""/>
+                        </div>
+                    </div> */}
+                </div>
             </div>
         </div>
     )
