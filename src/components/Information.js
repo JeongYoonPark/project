@@ -15,9 +15,6 @@ import PHP from '../img/Php.png';
 import MySQL from '../img/MySQL.png';
 import Node from '../img/Node.png';
 import GitHub from '../img/Github.png';
-import Project1 from '../img/project1.png';
-import Project3 from '../img/project3.png';
-import Project4 from '../img/project4.png';
 import Windows from '../img/Windows.png';
 import Linux from '../img/Linux.png';
 import Redux from '../img/redux.png';
@@ -132,11 +129,11 @@ const Information = () => {
                     <div className="Company">
                         <div className="ProjectBox" onClick={popmodal}>
                             <h2>백오피스 개발</h2>
-                            <h3>2019-12 ~ </h3>
+                            <h3>2019-11 ~ </h3>
                         </div>
-                        <div className="ProjectBox">
+                        <div className="ProjectBox" onClick={popmodal}>
                             <h2>모바일 웹</h2>
-                            <h2>2020-10 ~ </h2>
+                            <h3>2020-10 ~ </h3>
                         </div>
                     </div>
                     {/* <h1>Personal</h1>

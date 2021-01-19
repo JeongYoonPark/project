@@ -18,7 +18,6 @@ function ProjectModal(props) {
         e.preventDefault();
         if(e.target == modal || e.target == close){
             props.onHide();
-            console.log(modal);
             modal.style.display = "none";
         }
     }
