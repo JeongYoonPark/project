@@ -17,6 +17,7 @@ function ProjectModal(props) {
     function CloseModal(e){
         e.preventDefault();
         if(e.target == modal || e.target == close){
+        
             props.onHide();
             modal.style.display = "none";
         }
@@ -30,10 +31,10 @@ function ProjectModal(props) {
             <div className="Modal-Box">
             <p className="close-btn"><span className="close">X</span></p>
                 <div class="Modal-Wrap">
-                    <div className="Modal_divide" style={{display: props.idx == 1 ? "block" : "none"}}>
+                    <div className="Modal_divide">
                     <h2>백오피스 개발</h2>
                     <h3>근무지 : 달리셔스</h3>
-                    <h3>UI/UX개발, API개발</h3>
+                    <h3>참여인원 : 1명</h3>
                     <div className="icon_box">
                         <img src={HTML} className="icon" alt=""/>
                         <img src={CSS} className="icon" alt=""/>
@@ -47,23 +48,6 @@ function ProjectModal(props) {
                         <img src={Project1} alt=""/>
                     </div>
                     </div>
-                    {/* <div className="Modal_divide" style={{display: props.idx == 2 ? "block" : "none"}}>
-                    <h2>백오피스 개발</h2>
-                    <h3>근무지 : 달리셔스</h3>
-                    <h3>UI/UX개발, API개발</h3>
-                        <div className="icon_box">
-                            <img src={HTML} className="icon" alt=""/>
-                            <img src={CSS} className="icon" alt=""/>
-                            <img src={Sass} className="icon" alt=""/>
-                            <img src={JS} className="icon" alt=""/>
-                            <img src={jQuery} className="icon" alt=""/>
-                            <img src={PHP} className="icon" alt=""/>
-                            <img src={MySQL} className="icon" alt=""/>
-                        </div>
-                        <div className="Description">
-                            <img src={Project1} alt=""/>
-                        </div>
-                    </div> */}
                 </div>
             </div>
         </div>

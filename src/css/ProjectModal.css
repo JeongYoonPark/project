@@ -27,7 +27,7 @@ h2{
 }
 .close-btn{
     position: fixed;
-    right:160px;
+    right:180px;
     margin-top:0px;
     font-weight: 200;
     font-size: 32px;
@@ -43,8 +43,11 @@ h2{
 }
 .Description{
     margin-top: 100px;
-    text-align: left;
+    text-align: center;
 }
 .Description > img{
     width:100%;
+}
+.img{
+    width:30% !important;
 }

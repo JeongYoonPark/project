@@ -19,6 +19,7 @@ import Windows from '../img/Windows.png';
 import Linux from '../img/Linux.png';
 import Redux from '../img/redux.png';
 import ProjectModal from '../components/modal/ProjectModal.js';
+import MobileModal from '../components/modal/MobileModal.js';
 
 const Information = () => {
 
@@ -28,32 +29,33 @@ const Information = () => {
     const dispatch = useDispatch();
     const [localCount, setLocalCount] = useState(0);
     const [show, modalShow] = useState(false);
-    const [modalIdx, setIndex] = useState(1);
+    const [mobile, mobileShow] = useState(false);
 
     const { count:storeCount } = useSelector((state) => state.count);
     useEffect(() => {
         console.log('Component did mount');
     }, []);
 
-    const increaseCount = useCallback(() => {
-        setLocalCount(localCount + 1);
-        dispatch(actions.increaseCount());
-    }, [localCount, dispatch]);
+    // const increaseCount = useCallback(() => {
+    //     setLocalCount(localCount + 1);
+    //     dispatch(actions.increaseCount());
+    // }, [localCount, dispatch]);
 
-    const decreaseCount = useCallback(() => {
-        setLocalCount(localCount - 1);
-        dispatch(actions.decreaseCount());
-    }, [localCount, dispatch]);
+    // const decreaseCount = useCallback(() => {
+    //     setLocalCount(localCount - 1);
+    //     dispatch(actions.decreaseCount());
+    // }, [localCount, dispatch]);
 
     function tabChange(idx){
         setStatus(idx);
     }
-    function setModal(idx){
-        setIndex(idx);
-    }
     function popmodal(e) {
         e.preventDefault();
         modalShow(true);
+    }
+    function popmobile(e) {
+        e.preventDefault();
+        mobileShow(true);
     }
     return (
         <section className="Information">
@@ -74,7 +76,8 @@ const Information = () => {
         {'-'}
       </div>
     </> */}
-            <ProjectModal idx={modalIdx} show={show} onHide={() => modalShow(false)}/>
+            <ProjectModal show={show} onHide={() => modalShow(false)}/>
+            <MobileModal show={mobile} onHide={() => mobileShow(false)}/>
             <div className="head">
                 {tab.map((name, idx) => {
                     return(
@@ -125,13 +128,13 @@ const Information = () => {
                     </div>  
                 </div>
                 <div className={(status==1 ? " display " : "")+"Project tab"}>
-                    <h1>Company</h1>
+                    {/* <h1>Company</h1> */}
                     <div className="Company">
                         <div className="ProjectBox" onClick={popmodal}>
                             <h2>백오피스 개발</h2>
                             <h3>2019-11 ~ </h3>
                         </div>
-                        <div className="ProjectBox" onClick={popmodal}>
+                        <div className="ProjectBox" onClick={popmobile}>
                             <h2>모바일 웹</h2>
                             <h3>2020-10 ~ </h3>
                         </div>
