@@ -18,6 +18,7 @@ import GitHub from '../img/Github.png';
 import Windows from '../img/Windows.png';
 import Linux from '../img/Linux.png';
 import Redux from '../img/redux.png';
+import Flutter from '../img/Flutter.png';
 import ProjectModal from '../components/modal/ProjectModal.js';
 import MobileModal from '../components/modal/MobileModal.js';
 
@@ -107,6 +108,7 @@ const Information = () => {
                                         <span><img src={Sass} alt=""/></span>
                                         <span><img src={ReactImg} alt=""/></span>
                                         <span><img src={Redux} className="icon" alt=""/></span>
+                                        <span><img src={Flutter} alt=""/></span>
                                         <span><img src={jQuery} alt=""/></span>
                                         <span><img src={JS} alt=""/></span>
                                     </div>

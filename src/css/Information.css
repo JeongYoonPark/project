@@ -170,7 +170,7 @@ h4{
     width:84px;
     height:84px;
     border-radius: 15px;
-    opacity: 0.5;
+    opacity: 0.3;
     transition: 0.3s;
 }
 .SkillList span:hover img{
