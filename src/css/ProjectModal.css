@@ -1,0 +1,53 @@
+.Modal-Background{
+    cursor: pointer;
+    position: fixed;
+    width: 100vw;
+    top:0;
+    left:0;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.Modal-Box{
+    cursor: default;
+    width:80vw;
+    height: 70vh;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 10vh auto;
+    overflow-y: scroll;
+    position: relative;
+}
+h2{
+    margin-top: 60px;
+}
+.Modal-Wrap{
+    width: 100%;
+}
+.close-btn{
+    position: fixed;
+    right:180px;
+    margin-top:0px;
+    font-weight: 200;
+    font-size: 32px;
+}
+.close-btn > span{
+    cursor: pointer;
+}
+.icon{
+    width:50px;
+    height:50px;
+    margin:0;
+    margin-right: 30px;
+}
+.Description{
+    margin-top: 100px;
+    text-align: center;
+}
+.Description > img{
+    width:100%;
+}
+.img{
+    width:30% !important;
+}
