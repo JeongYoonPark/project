@@ -33,6 +33,7 @@ function ProjectModal(props) {
                 <div class="Modal-Wrap">
                     <div className="Modal_divide">
                     <h2>백오피스 개발</h2>
+                    <h2>주문확인, 상품등록 등 전반적인 서비스의 관리기능 구현</h2>
                     <h3>근무지 : 달리셔스</h3>
                     <h3>참여인원 : 1명</h3>
                     <div className="icon_box">

@@ -34,6 +34,7 @@ function MobileModal(props) {
                 <div class="Modal-Wrap">
                     <div className="Modal_divide">
                         <h2>모바일 웹 개발</h2>
+                        <h2>거래처에서 주문을 확인하고 준비완료 처리를하는 반응형 모바일 웹 개발</h2>
                         <h3>근무지 : 달리셔스</h3>
                         <h3>참여인원 : 1명</h3>
                         <div className="icon_box">

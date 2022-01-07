@@ -134,11 +134,11 @@ const Information = () => {
                     <div className="Company">
                         <div className="ProjectBox" onClick={popmodal}>
                             <h2>백오피스 개발</h2>
-                            <h3>2019-11 ~ </h3>
+                            <h3>2019-11 ~ 2021-03</h3>
                         </div>
                         <div className="ProjectBox" onClick={popmobile}>
                             <h2>모바일 웹</h2>
-                            <h3>2020-10 ~ </h3>
+                            <h3>2020-10 ~ 2021-03</h3>
                         </div>
                     </div>
                     {/* <h1>Personal</h1>
