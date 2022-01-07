@@ -97,7 +97,7 @@ const Information = () => {
                                 <img className="profileImg" src={profile} alt=""/>
                                 <h3>박정윤</h3>
                                 <h3>2001-09-22(만 20세)</h3>
-                                <h3>달리셔스(주)<br/>개발팀 2019-11 ~ 재직중</h3>
+                                <h3>달리셔스(주)<br/>개발팀 2019-11 ~ 2021-03</h3>
                             </div>
                             <div className="container">
                                 <div className="SkillList">
