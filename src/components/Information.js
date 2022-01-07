@@ -25,7 +25,7 @@ import MobileModal from '../components/modal/MobileModal.js';
 const Information = () => {
 
     const tab = ["Profile", "Project", "Contact"];
-    const [status, setStatus] = useState(1);
+    const [status, setStatus] = useState(0);
 
     const dispatch = useDispatch();
     const [localCount, setLocalCount] = useState(0);

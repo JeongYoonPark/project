@@ -19,7 +19,6 @@ function MobileModal(props) {
         e.preventDefault();
         if(e.target == modal || e.target == close){
             props.onHide();
-            console.log(1);
             modal.style.display = "none";
         }
     }
