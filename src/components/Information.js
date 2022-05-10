@@ -21,7 +21,7 @@ import Redux from '../img/redux.png';
 import Flutter from '../img/Flutter.png';
 import ProjectModal from '../components/modal/ProjectModal.js';
 import MobileModal from '../components/modal/MobileModal.js';
-
+//
 const Information = () => {
 
     const tab = ["Profile", "Project", "Contact"];
