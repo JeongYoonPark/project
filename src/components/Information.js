@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from  'react-redux';
 import * as actions from  '../actions/count';
 import '../css/Information.css';
+import '../css/index.css';
 import phone from '../img/Phone.png';
 import email from '../img/Email.png';
 import profile from '../img/profile.jpg';
