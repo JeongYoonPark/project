@@ -51,8 +51,11 @@
 .introduce > div{
     overflow:hidden;
 }
-.profile > .InfoBox{
-    height: 240px;
+.InfoBox > div{
+    padding:10px 10px 0px 10px;
+    margin-right: 50px;
+    border-radius: 20px;
+    background-color: rgba(232, 232, 232, 0.5);
 }
 .introduce span{
     float: right;
@@ -62,7 +65,7 @@
     margin-top: 0;
     font-weight: bold;
     font-size:24px;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     text-align: left;
 }
 .ProjectBox{

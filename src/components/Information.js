@@ -5,7 +5,7 @@ import '../css/Information.css';
 import '../css/index.css';
 import phone from '../img/Phone.png';
 import email from '../img/Email.png';
-import profile from '../img/profile.jpg';
+// import profile from '../img/profile.jpg';
 import HTML from '../img/HTML5.png';
 import CSS from '../img/CSS3.png';
 import JS from '../img/JavaScript.png';
@@ -22,7 +22,7 @@ import Redux from '../img/redux.png';
 import Flutter from '../img/Flutter.png';
 import ProjectModal from '../components/modal/ProjectModal.js';
 import MobileModal from '../components/modal/MobileModal.js';
-//
+
 const Information = () => {
 
     const tab = ["Profile", "Project", "Contact"];
@@ -32,10 +32,22 @@ const Information = () => {
     const [localCount, setLocalCount] = useState(0);
     const [show, modalShow] = useState(false);
     const [mobile, mobileShow] = useState(false);
+    const [age, setAge] = useState(0);
 
     const { count:storeCount } = useSelector((state) => state.count);
     useEffect(() => {
-        console.log('Component did mount');
+        const dt = new Date("2001-09-22");
+        const curDt = new Date();
+        const korAge = curDt.getFullYear()-2000;
+        var min = 2;
+        const birthMon = dt.getMonth();
+        const birthDate = dt.getDate();
+        const curMon = curDt.getMonth();
+        const curDate = curDt.getDate();
+        if ( birthMon <= curMon & birthDate <= curDate){
+            min = 1;
+        }
+        setAge(korAge-min);
     }, []);
 
     // const increaseCount = useCallback(() => {
@@ -95,12 +107,34 @@ const Information = () => {
                         <h1 className="active">Introduce</h1>
                         <div className="profile">
                             <div className="InfoBox">
-                                <img className="profileImg" src={profile} alt=""/>
-                                <h3>박정윤</h3>
-                                <br/>
-                                <h3>2001-09-22(만 20세)</h3>
-                                <br/>
-                                <h3>달리셔스(주)<br/>개발팀 2019-11 ~ 2021-03</h3>
+                                <div>
+                                    <h3>
+                                        박정윤
+                                        <br/>
+                                        2001-09-22 ~ (만 {age} 세)
+                                    </h3>
+                                </div>
+                                <div>
+                                    <h3>
+                                        서울디지텍고등학교
+                                        <br/>
+                                        유비쿼터스과 2017-03 ~ 2020-02
+                                    </h3>
+                                </div>
+                                <div>
+                                    <h3>
+                                        달리셔스(주)
+                                        <br/>
+                                        개발팀(매니저) 2019-11 ~ 2021-03
+                                    </h3>
+                                </div>
+                                <div>
+                                    <h3>
+                                        경기과학기술대학교
+                                        <br/>
+                                        컴퓨터모바일융합공학과 2021-03 ~ 
+                                    </h3>
+                                </div>
                             </div>
                             <div className="container">
                                 <div className="SkillList">
